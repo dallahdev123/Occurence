@@ -11,7 +11,7 @@ int main(){
         /* code */
         do
         {
-            printf("Donner la taille du tableau >1: \n");
+            printf("Donner la taille du tableau >=1 et <=50: \n");
             tailleTab=scanf("%d",&max);
             while((c=getchar())!='\n' && c != EOF);
 
@@ -22,9 +22,12 @@ int main(){
             /* code */
             for (i=0; i<max; i++)
             {
-                /* code */
-                printf("Donner la valeur de tableau[%d]: \n",i);
-                scanf("%d",&tableau[i]);
+                do
+                {
+                    printf("Donner la valeur de tableau[%d]: \n",i);
+                    scanf("%d",&tableau[i]);
+                } while ((c=getchar())!='\n' && c != EOF);
+                
             }
             tabNotOccured(tableau,max);
         }else
